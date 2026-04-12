@@ -338,279 +338,7 @@ if ('serviceWorker' in navigator) {
     }
   
   </script>
-<style id="vg-custom-styles">
-  /* ── VG Custom Sections ── */
-  :root {
-    --vg-brown: #b08070;
-    --vg-brown-light: #e8ddd8;
-    --vg-dark: #161616;
-    --vg-grey: #666;
-    --vg-bg: #fefefe;
-    --vg-section-alt: #f9f6f4;
-  }
-
-  /* ── Apps Section ── */
-  #vg-apps {
-    font-family: 'Karla', sans-serif;
-    padding: 80px 40px;
-    background: var(--vg-section-alt);
-    text-align: center;
-  }
-  #vg-apps .vg-section-label {
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--vg-brown);
-    margin-bottom: 12px;
-  }
-  #vg-apps .vg-section-title {
-    font-family: 'Old Standard TT', serif;
-    font-size: clamp(28px, 4vw, 42px);
-    color: var(--vg-dark);
-    margin: 0 0 16px;
-    font-weight: 400;
-  }
-  #vg-apps .vg-section-subtitle {
-    font-size: 16px;
-    color: var(--vg-grey);
-    max-width: 560px;
-    margin: 0 auto 60px;
-    line-height: 1.6;
-  }
-  .vg-app-card {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 32px rgba(176,128,112,0.10);
-    max-width: 900px;
-    margin: 0 auto 48px;
-    overflow: hidden;
-    text-align: left;
-  }
-  .vg-app-card-header {
-    background: linear-gradient(135deg, var(--vg-brown) 0%, #c8a090 100%);
-    padding: 28px 36px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  .vg-app-card-header .app-badge {
-    width: 56px; height: 56px;
-    border-radius: 14px;
-    overflow: hidden;
-    flex-shrink: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.20);
-  }
-  .vg-app-card-header .app-badge img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .vg-app-card-header h3 {
-    color: #fff;
-    font-family: 'Old Standard TT', serif;
-    font-size: 24px;
-    font-weight: 400;
-    margin: 0;
-  }
-  .vg-app-card-header .app-tag {
-    margin-left: auto;
-    background: rgba(255,255,255,0.2);
-    color: #fff;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 20px;
-  }
-  .vg-app-card-body {
-    padding: 36px;
-  }
-
-  /* Screenshots */
-  .vg-screenshots-label {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--vg-brown);
-    margin-bottom: 14px;
-  }
-  .vg-screenshots {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 32px;
-    overflow-x: auto;
-    padding-bottom: 8px;
-  }
-  .vg-screenshot-slot {
-    flex: 0 0 140px;
-    height: 250px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
-    background: var(--vg-brown-light);
-  }
-  .vg-screenshot-slot:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
-  }
-  .vg-screenshot-slot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    display: block;
-    border-radius: 12px;
-  }
-
-  /* Description */
-  .vg-app-desc-label {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--vg-brown);
-    margin-bottom: 10px;
-  }
-  .vg-app-desc {
-    font-size: 15px;
-    line-height: 1.75;
-    color: #444;
-    margin-bottom: 32px;
-    max-width: 680px;
-  }
-
-  /* Play Store */
-  .vg-playstore-label {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--vg-brown);
-    margin-bottom: 12px;
-  }
-  .vg-playstore-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--vg-dark);
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 10px;
-    font-family: 'Karla', sans-serif;
-    font-size: 14px;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .vg-playstore-btn:hover { background: var(--vg-brown); transform: translateY(-1px); }
-  .vg-playstore-btn .ps-text small { display: block; font-size: 10px; opacity: 0.7; text-transform: uppercase; letter-spacing: 1px; }
-  .vg-playstore-btn .ps-text strong { font-size: 15px; }
-
-  /* ── Modal Overlay ── */
-  .vg-modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(22,22,22,0.6);
-    z-index: 99999;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    backdrop-filter: blur(3px);
-  }
-  .vg-modal-overlay.open { display: flex; }
-  .vg-modal {
-    background: #fff;
-    border-radius: 16px;
-    max-width: 760px;
-    width: 100%;
-    max-height: 88vh;
-    overflow-y: auto;
-    box-shadow: 0 24px 80px rgba(0,0,0,0.25);
-    animation: vg-modal-in 0.25s ease;
-  }
-  @keyframes vg-modal-in {
-    from { opacity:0; transform:translateY(20px) scale(0.97); }
-    to   { opacity:1; transform:translateY(0) scale(1); }
-  }
-  .vg-modal-header {
-    padding: 28px 36px 20px;
-    border-bottom: 1px solid #f0ebe8;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky; top: 0;
-    background: #fff;
-    border-radius: 16px 16px 0 0;
-  }
-  .vg-modal-header h2 {
-    font-family: 'Old Standard TT', serif;
-    font-size: 22px;
-    font-weight: 400;
-    color: var(--vg-dark);
-    margin: 0;
-  }
-  .vg-modal-header .vg-modal-close {
-    background: none; border: none; cursor: pointer;
-    font-size: 22px; color: var(--vg-grey);
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.15s;
-  }
-  .vg-modal-header .vg-modal-close:hover { background: var(--vg-brown-light); }
-  .vg-modal-body {
-    padding: 32px 36px 40px;
-    font-family: 'Karla', sans-serif;
-    font-size: 15px;
-    line-height: 1.8;
-    color: #444;
-  }
-  .vg-modal-body h3 {
-    font-family: 'Old Standard TT', serif;
-    font-size: 17px;
-    font-weight: 400;
-    color: var(--vg-dark);
-    margin: 28px 0 8px;
-    border-left: 3px solid var(--vg-brown);
-    padding-left: 12px;
-  }
-  .vg-modal-body p { margin: 0 0 14px; }
-  .vg-modal-body .vg-updated {
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--vg-brown);
-    margin-bottom: 24px;
-  }
-
-  /* Footer policy links */
-  .vg-policy-links {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 16px 20px 8px;
-    background: #f9f6f4;
-    font-family: 'Karla', sans-serif;
-    font-size: 13px;
-  }
-  .vg-policy-links a {
-    color: var(--vg-brown);
-    text-decoration: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 11px;
-  }
-  .vg-policy-links a:hover { text-decoration: underline; }
-
-  @media (max-width: 600px) {
-    #vg-apps { padding: 60px 20px; }
-    .vg-app-card-body { padding: 24px 20px; }
-    .vg-modal-header, .vg-modal-body { padding-left: 20px; padding-right: 20px; }
-    .vg-screenshot-slot { flex: 0 0 120px; height: 213px; }
-  }
-</style>
+  <link rel="stylesheet" href="assets/css/vg-styles.css">
 </head>
 <body class="x x-fonts-karla" data-new-gr-c-s-check-loaded="14.1255.0" data-gr-ext-installed=""><div id="layout-d-4-b-51-aba-7-f-70-499-e-aa-76-4-af-03-f-47-bdaf" class="layout layout-layout layout-layout-layout-28 locale-en-IN lang-en"><div data-ux="Page" id="page-43126" class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-4 c1-5 c1-6 c1-7 c1-8 c1-9 c1-a c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div page-inner c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><div id="c45d71e3-98bd-49cd-a3f2-327273ee3b19" class="widget widget-header widget-header-header-9"><div data-ux="Header" role="main" data-aid="HEADER_WIDGET" id="n-43127" class="x-el x-el-div x-el x-el c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><div> <div style="width: 100%; min-height: 50px;"></div></div><section data-ux="Section" data-aid="HEADER_SECTION" class="x-el x-el-section c1-1 c1-2 c1-3 c1-h c1-i c1-j c1-k c1-b c1-c c1-l c1-m c1-d c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-n c1-b c1-c c1-d c1-o c1-e c1-f c1-g"></div><nav data-ux="Block" class="x-el x-el-nav c1-1 c1-2 c1-p c1-q c1-r c1-b c1-c c1-d c1-s c1-t c1-u c1-v c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-w c1-x c1-4 c1-y c1-z c1-10 c1-11 c1-12 c1-13 c1-14 c1-15 c1-16 c1-17 c1-b c1-c c1-d c1-18 c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-19 c1-1a c1-1b c1-b c1-c c1-d c1-e c1-f c1-g"></div><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-y c1-4 c1-1c c1-1d c1-1e c1-16 c1-14 c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="Block" data-aid="HEADER_LOGO_RENDERED" class="x-el x-el-div c1-1f c1-1g c1-1h c1-1i c1-1j c1-1k c1-1l c1-1m c1-1n c1-1o"><a rel="" role="link" aria-haspopup="menu" data-ux="Link" data-page="ef89a92d-e8de-4093-a562-13787803a659" title="" href="#" data-typography="LinkAlpha" class="x-el x-el-a c1-1p c1-1q c1-1r c1-1s c1-1e c1-1t c1-1u c1-1v c1-1w c1-1x c1-1y c1-1z c1-20 c1-b c1-21 c1-c c1-22 c1-23 c1-24 c1-d c1-e c1-f c1-g" data-tccl="ux2.HEADER.header9.Logo.Default.Link.Default.43130.click,click"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-25 c1-1a c1-26 c1-1b c1-17 c1-b c1-c c1-d c1-27 c1-e c1-f c1-g"><img src="./Velaro Global_files/qt=q_95" srcset="//img1.wsimg.com/isteam/ip/d4b51aba-7f70-499e-aa76-4af03f47bdaf/VG%202.png/:/rs=w:100,h:100,cg:true,m/cr=w:100,h:100/qt=q:95, //img1.wsimg.com/isteam/ip/d4b51aba-7f70-499e-aa76-4af03f47bdaf/VG%202.png/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200/qt=q:95 2x, //img1.wsimg.com/isteam/ip/d4b51aba-7f70-499e-aa76-4af03f47bdaf/VG%202.png/:/rs=w:300,h:300,cg:true,m/cr=w:300,h:300/qt=q:95 3x" data-ux="ImageLogo" data-aid="HEADER_LOGO_IMAGE_RENDERED" class="x-el x-el-img c1-1 c1-2 c1-4 c1-1z c1-28 c1-29 c1-z c1-11 c1-2a c1-2b c1-2c c1-2d c1-q c1-2e c1-25 c1-1a c1-26 c1-1b c1-2f c1-17 c1-b c1-c c1-2g c1-2h c1-2i c1-2j c1-2k c1-2l c1-2m c1-2n c1-2o c1-2p c1-2q c1-2r c1-2s c1-2t c1-2u c1-d c1-2v c1-2w c1-2x c1-e c1-f c1-g"></div></a></div></div><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-19 c1-1a c1-1b c1-y c1-2y c1-b c1-c c1-d c1-e c1-f c1-g"></div></div><div data-ux="Container" id="navBarId-43132" class="x-el x-el-div c1-1 c1-2 c1-28 c1-29 c1-1b c1-1a c1-1z c1-n c1-b c1-c c1-d c1-2z c1-30 c1-31 c1-e c1-f c1-g"><div data-ux="Container" class="x-el x-el-div c1-1 c1-2 c1-28 c1-29 c1-32 c1-33 c1-1z c1-y c1-4 c1-34 c1-35 c1-1d c1-36 c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-y c1-w c1-1d c1-37 c1-38 c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-y c1-w c1-1d c1-4 c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="Block" data-aid="HEADER_LOGO_RENDERED" class="x-el x-el-div c1-1f c1-1g c1-1c c1-1h c1-39 c1-3a c1-1i c1-3b c1-1l c1-1m c1-1n c1-1o"><a rel="" role="link" aria-haspopup="menu" data-ux="Link" data-page="ef89a92d-e8de-4093-a562-13787803a659" title="" href="#" data-typography="LinkAlpha" class="x-el x-el-a c1-1p c1-1q c1-1r c1-1s c1-1e c1-1t c1-1u c1-1v c1-1w c1-1x c1-1y c1-1z c1-20 c1-b c1-21 c1-c c1-22 c1-23 c1-24 c1-d c1-e c1-f c1-g" data-tccl="ux2.HEADER.header9.Logo.Default.Link.Default.43133.click,click"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-25 c1-1a c1-26 c1-1b c1-17 c1-b c1-c c1-d c1-27 c1-e c1-f c1-g"><img src="./Velaro Global_files/qt=q_95" srcset="//img1.wsimg.com/isteam/ip/d4b51aba-7f70-499e-aa76-4af03f47bdaf/VG%202.png/:/rs=w:100,h:100,cg:true,m/cr=w:100,h:100/qt=q:95, //img1.wsimg.com/isteam/ip/d4b51aba-7f70-499e-aa76-4af03f47bdaf/VG%202.png/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200/qt=q:95 2x, //img1.wsimg.com/isteam/ip/d4b51aba-7f70-499e-aa76-4af03f47bdaf/VG%202.png/:/rs=w:300,h:300,cg:true,m/cr=w:300,h:300/qt=q:95 3x" data-ux="ImageLogo" data-aid="HEADER_LOGO_IMAGE_RENDERED" id="logo-43131" class="x-el x-el-img c1-1 c1-2 c1-4 c1-1z c1-28 c1-29 c1-z c1-11 c1-2a c1-2b c1-2c c1-2d c1-q c1-2e c1-25 c1-1a c1-26 c1-1b c1-2f c1-17 c1-b c1-c c1-2g c1-2h c1-2i c1-2j c1-2k c1-2l c1-2m c1-2n c1-2o c1-2p c1-2q c1-2r c1-2s c1-2t c1-2u c1-d c1-2v c1-2w c1-2x c1-e c1-f c1-g"></div></a></div></div></div></div></div></nav><div data-ux="SectionContainer" class="x-el x-el-div c1-1 c1-2 c1-12 c1-29 c1-3c c1-3d c1-1z c1-b c1-c c1-3e c1-d c1-30 c1-3f c1-3g c1-3h c1-3i c1-3j c1-3k c1-e c1-3l c1-f c1-3m c1-g"><div data-ux="Grid" class="x-el x-el-div c1-1 c1-2 c1-y c1-3n c1-3o c1-3p c1-z c1-10 c1-11 c1-12 c1-b c1-c c1-d c1-e c1-f c1-g"><div data-ux="GridCell" class="x-el x-el-div c1-1 c1-2 c1-3n c1-3q c1-3r c1-3s c1-1z c1-25 c1-3d c1-26 c1-3c c1-3t c1-3u c1-3v c1-y c1-1d c1-w c1-3w c1-3x c1-b c1-c c1-d c1-3y c1-3z c1-40 c1-41 c1-s c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-y c1-3x c1-2y c1-4 c1-p c1-42 c1-43 c1-44 c1-b c1-c c1-d c1-41 c1-30 c1-45 c1-46 c1-e c1-f c1-g"><div data-ux="Hero" class="x-el x-el-div c1-1 c1-2 c1-42 c1-b c1-c c1-d c1-47 c1-48 c1-49 c1-e c1-f c1-g"><div data-ux="Container" class="x-el x-el-div c1-1 c1-2 c1-12 c1-10 c1-1b c1-1a c1-1z c1-4a c1-25 c1-26 c1-z c1-11 c1-17 c1-b c1-c c1-3e c1-d c1-4b c1-e c1-3l c1-f c1-3m c1-g"><div id="tagline-container-43134" defaultfontsize="xxlarge" class="x-el x-el-div c1-1 c1-2 c1-1s c1-1e c1-4c c1-p c1-1z c1-20 c1-4d c1-b c1-c c1-d c1-e c1-f c1-g" style=""><h1 role="heading" aria-level="1" data-ux="Tagline" maxlines="4" data-aid="HEADER_TAGLINE_RENDERED" id="dynamic-tagline-43135" containerid="tagline-container-43134" data-typography="HeadingAlpha" class="x-el x-el-h1 c1-4e c1-2 c1-1s c1-1e c1-4d c1-28 c1-29 c1-z c1-11 c1-4f c1-4g c1-p c1-1z c1-1f c1-1g c1-4h c1-4i c1-4j c1-4k c1-4l c1-4m c1-4n" data-last-size="54px">Built for people, powered by purpose.</h1><span role="heading" aria-level="NaN" data-ux="scaler" data-size="xxlarge" data-scaler-id="scaler-tagline-container-43134" aria-hidden="true" data-typography="HeadingAlpha" class="x-el x-el-span c1-4e c1-2 c1-4o c1-4p c1-4d c1-28 c1-29 c1-z c1-11 c1-4f c1-4q c1-1z c1-n c1-4r c1-20 c1-4s c1-4t c1-4u c1-1g c1-4h c1-4i c1-4j c1-4v c1-4w c1-4x c1-4y" style="display: none;">Built for people, powered by purpose.</span><span role="heading" aria-level="NaN" data-ux="scaler" data-size="xxxlarge" data-scaler-id="scaler-tagline-container-43134" aria-hidden="true" data-typography="HeadingAlpha" class="x-el x-el-span c1-4e c1-2 c1-4o c1-4p c1-4d c1-28 c1-29 c1-z c1-11 c1-4f c1-4q c1-1z c1-n c1-4r c1-20 c1-4s c1-4t c1-4g c1-1g c1-4h c1-4i c1-4j c1-4k c1-4l c1-4m c1-4n" style="display: none;">Built for people, powered by purpose.</span><span role="heading" aria-level="NaN" data-ux="scaler" data-size="xlarge" data-scaler-id="scaler-tagline-container-43134" aria-hidden="true" data-typography="HeadingAlpha" class="x-el x-el-span c1-4e c1-2 c1-4o c1-4p c1-4d c1-28 c1-29 c1-z c1-11 c1-4f c1-4q c1-1z c1-n c1-4r c1-20 c1-4s c1-4t c1-4z c1-1g c1-4h c1-4i c1-4j c1-50 c1-51 c1-52 c1-53" style="display: none;">Built for people, powered by purpose.</span><span role="heading" aria-level="NaN" data-ux="scaler" data-size="large" data-scaler-id="scaler-tagline-container-43134" aria-hidden="true" data-typography="HeadingAlpha" class="x-el x-el-span c1-4e c1-2 c1-4o c1-4p c1-4d c1-28 c1-29 c1-z c1-11 c1-4f c1-4q c1-1z c1-n c1-4r c1-20 c1-4s c1-4t c1-54 c1-1g c1-4h c1-4i c1-4j c1-55 c1-56 c1-57 c1-58" style="display: none;">Built for people, powered by purpose.</span></div></div><div data-ux="SubTagline" data-aid="HEADER_TAGLINE2_RENDERED" data-typography="HeadingDelta" class="x-el c1-59 c1-2 c1-1s c1-1e c1-5a c1-z c1-5b c1-5c c1-1f c1-1z c1-5d c1-5e c1-5f c1-5g c1-b c1-4h c1-5h c1-5i c1-5j c1-5k c1-5l c1-5m x-rt"><p style="margin:0"><span>Empowering your life with impactful, user-friendly apps.</span></p></div></div></div></div><div data-ux="GridCell" class="x-el x-el-div c1-1 c1-2 c1-3n c1-3q c1-3r c1-5t c1-1z c1-25 c1-1a c1-26 c1-1b c1-3t c1-3u c1-3v c1-y c1-1d c1-w c1-5u c1-b c1-c c1-d c1-5v c1-5w c1-e c1-f c1-g"><div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-y c1-w c1-p c1-4 c1-b c1-c c1-d c1-e c1-f c1-g"><picture class="x-el x-el-picture c1-1 c1-2 c1-4 c1-5x c1-1c c1-5y c1-17 c1-b c1-c c1-d c1-e c1-f c1-g"><source media="(max-width: 450px)" srcset="//img1.wsimg.com/isteam/getty/1651698988/:/rs=w:371,h:371, //img1.wsimg.com/isteam/getty/1651698988/:/rs=w:742,h:742 2x, //img1.wsimg.com/isteam/getty/1651698988/:/rs=w:1113,h:1113 3x"><source media="(min-width: 451px) and (max-width: 767px)" srcset="//img1.wsimg.com/isteam/getty/1651698988/:/rs=w:687,h:687, //img1.wsimg.com/isteam/getty/1651698988/:/rs=w:1374,h:1374 2x, //img1.wsimg.com/isteam/getty/1651698988/:/rs=w:2061,h:2061 3x"><source media="(min-width: 768px) and (max-width: 1023px)" srcset="//img1.wsimg.com/isteam/getty/1651698988/:/rs=w:1023,h:1023, //img1.wsimg.com/isteam/getty/1651698988/:/rs=w:2046,h:2046 2x"><source media="(min-width: 1024px) and (max-width: 1279px)" srcset="//img1.wsimg.com/isteam/getty/1651698988/:/rs=w:984,h:984, //img1.wsimg.com/isteam/getty/1651698988/:/rs=w:1968,h:1968 2x"><source media="(min-width: 1280px) and (max-width: 1535px)" srcset="//img1.wsimg.com/isteam/getty/1651698988/:/rs=w:1160,h:1160, //img1.wsimg.com/isteam/getty/1651698988/:/rs=w:2320,h:2320 2x"><source media="(min-width: 1536px)" srcset="//img1.wsimg.com/isteam/getty/1651698988/:/rs=w:1280,h:1280"><img data-ux="HeaderMediaImage" src="./Velaro Global_files/saved_resource" data-ht="Inset" data-aid="BACKGROUND_IMAGE_RENDERED" headertreatment="Inset" class="x-el x-el-img c1-1 c1-2 c1-4 c1-1z c1-28 c1-29 c1-5z c1-11 c1-2a c1-2b c1-2f c1-b c1-c c1-d c1-60 c1-61 c1-47 c1-e c1-f c1-g"></picture></div></div></div></div></section>  </div></div></div><div id="a513ea68-5437-4f41-b088-1c32529dc331" class="widget widget-contact widget-contact-contact-2"><div data-ux="Widget" role="region" id="a513ea68-5437-4f41-b088-1c32529dc331" class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><div> 
 <!-- ══ APPLICATIONS SECTION ══════════════════════════════════════════════════ -->
@@ -748,7 +476,7 @@ if ('serviceWorker' in navigator) {
   <div class="vg-modal">
     <div class="vg-modal-header">
       <h2 id="privacy-title">Privacy Policy</h2>
-      <button class="vg-modal-close" onclick="document.getElementById('vg-privacy-modal').classList.remove('open')" aria-label="Close">✕</button>
+      <button class="vg-modal-close" data-modal-close aria-label="Close">✕</button>
     </div>
     <div class="vg-modal-body">
       <p class="vg-updated">Last updated: April 2025</p>
@@ -771,7 +499,7 @@ if ('serviceWorker' in navigator) {
       <p>We retain your data only as long as necessary to fulfil the purposes outlined in this policy, or as required by law. You may request deletion of your data at any time.</p>
 
       <h3>Your Rights</h3>
-      <p>Depending on your location, you may have rights to access, correct, or delete your personal data. To exercise these rights, contact us at <a href="mailto:contact@velaroglobal.com" style="color:#b08070;">contact@velaroglobal.com</a>.</p>
+      <p>Depending on your location, you may have rights to access, correct, or delete your personal data. To exercise these rights, contact us at <a href="mailto:contact@velaroglobal.com" class="vg-link">contact@velaroglobal.com</a>.</p>
 
       <h3>Children's Privacy</h3>
       <p>Our services are not directed at children under 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected such information, please contact us immediately.</p>
@@ -780,7 +508,7 @@ if ('serviceWorker' in navigator) {
       <p>We may update this Privacy Policy periodically. We will notify you of significant changes by updating the date above. Continued use of our services constitutes acceptance of the revised policy.</p>
 
       <h3>Contact Us</h3>
-      <p>If you have any questions about this Privacy Policy, please reach us at <a href="mailto:contact@velaroglobal.com" style="color:#b08070;">contact@velaroglobal.com</a>.</p>
+      <p>If you have any questions about this Privacy Policy, please reach us at <a href="mailto:contact@velaroglobal.com" class="vg-link">contact@velaroglobal.com</a>.</p>
     </div>
   </div>
 </div>
@@ -790,7 +518,7 @@ if ('serviceWorker' in navigator) {
   <div class="vg-modal">
     <div class="vg-modal-header">
       <h2 id="terms-title">Terms of Usage</h2>
-      <button class="vg-modal-close" onclick="document.getElementById('vg-terms-modal').classList.remove('open')" aria-label="Close">✕</button>
+      <button class="vg-modal-close" data-modal-close aria-label="Close">✕</button>
     </div>
     <div class="vg-modal-body">
       <p class="vg-updated">Last updated: April 2025</p>
@@ -825,34 +553,19 @@ if ('serviceWorker' in navigator) {
       <p>These Terms shall be governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts of India.</p>
 
       <h3>Contact Us</h3>
-      <p>For questions regarding these Terms, please contact us at <a href="mailto:contact@velaroglobal.com" style="color:#b08070;">contact@velaroglobal.com</a>.</p>
+      <p>For questions regarding these Terms, please contact us at <a href="mailto:contact@velaroglobal.com" class="vg-link">contact@velaroglobal.com</a>.</p>
     </div>
   </div>
 </div>
 
 <!-- ══ POLICY LINKS BAR ══════════════════════════════════════════════════════ -->
 <div class="vg-policy-links">
-  <a href="#" onclick="event.preventDefault(); document.getElementById('vg-privacy-modal').classList.add('open')">Privacy Policy</a>
-  <a href="#" onclick="event.preventDefault(); document.getElementById('vg-terms-modal').classList.add('open')">Terms of Usage</a>
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Usage</a>
   <a href="mailto:contact@velaroglobal.com">contact@velaroglobal.com</a>
 </div>
 
-<script>
-  // Close modals on overlay click
-  document.querySelectorAll('.vg-modal-overlay').forEach(function(overlay) {
-    overlay.addEventListener('click', function(e) {
-      if (e.target === overlay) overlay.classList.remove('open');
-    });
-  });
-  // Close on Escape key
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.vg-modal-overlay.open').forEach(function(m) {
-        m.classList.remove('open');
-      });
-    }
-  });
-</script>
+<script src="assets/js/vg-modal.js"></script>
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
       div.grammarly-desktop-integration {
         position: absolute;

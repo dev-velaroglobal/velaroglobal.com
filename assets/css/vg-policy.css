@@ -1,0 +1,202 @@
+/**
+ * vg-policy.css
+ * Velaro Global — Policy Page Layout
+ *
+ * Scope: Styles specific to privacy-policy.html and terms.html.
+ * Design tokens are inherited from vg-styles.css.
+ *
+ * SRP : This file only handles the layout and typography of policy pages.
+ *       It does not duplicate any token definitions from vg-styles.css.
+ */
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   PAGE BASE
+───────────────────────────────────────────────────────────────────────────── */
+.vg-policy-page {
+  margin: 0;
+  background: var(--vg-bg);
+  font-family: 'Karla', sans-serif;
+  color: var(--vg-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SITE HEADER
+───────────────────────────────────────────────────────────────────────────── */
+.vg-site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  border-bottom: 1px solid var(--vg-brown-light);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.vg-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.vg-logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.vg-logo-text {
+  font-family: 'Old Standard TT', serif;
+  font-size: 18px;
+  color: var(--vg-dark);
+}
+
+.vg-back-link {
+  font-size: 13px;
+  color: var(--vg-brown);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: opacity 0.15s;
+}
+
+.vg-back-link:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+───────────────────────────────────────────────────────────────────────────── */
+.vg-policy-main {
+  flex: 1;
+  padding: 60px 20px 80px;
+}
+
+.vg-policy-article {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   ARTICLE HEADER
+───────────────────────────────────────────────────────────────────────────── */
+.vg-policy-article-header {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--vg-brown-light);
+}
+
+.vg-policy-title {
+  font-family: 'Old Standard TT', serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  margin: 8px 0 12px;
+  color: var(--vg-dark);
+}
+
+.vg-policy-meta {
+  font-size: 13px;
+  color: var(--vg-grey);
+  letter-spacing: 1px;
+}
+
+.vg-policy-intro {
+  background: var(--vg-section-alt);
+  border-left: 4px solid var(--vg-brown);
+  border-radius: 0 8px 8px 0;
+  padding: 20px 24px;
+  margin-bottom: 40px;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.vg-policy-intro p {
+  margin: 0 0 10px;
+}
+
+.vg-policy-intro p:last-child {
+  margin: 0;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SECTION TYPOGRAPHY
+───────────────────────────────────────────────────────────────────────────── */
+.vg-policy-article section {
+  margin-bottom: 40px;
+}
+
+.vg-policy-article h2 {
+  font-family: 'Old Standard TT', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--vg-dark);
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--vg-brown-light);
+}
+
+.vg-policy-article p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin: 0 0 14px;
+}
+
+.vg-policy-article ul {
+  margin: 0 0 14px 0;
+  padding-left: 20px;
+}
+
+.vg-policy-article li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────────────────────────────────────────── */
+.vg-policy-footer {
+  background: var(--vg-section-alt);
+  padding: 24px 20px 16px;
+  text-align: center;
+  border-top: 1px solid var(--vg-brown-light);
+}
+
+.vg-policy-copyright {
+  font-size: 12px;
+  color: var(--vg-grey);
+  margin: 8px 0 0;
+  letter-spacing: 0.5px;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .vg-site-header {
+    padding: 14px 20px;
+  }
+
+  .vg-logo-text {
+    display: none;
+  }
+
+  .vg-policy-main {
+    padding: 40px 16px 60px;
+  }
+}

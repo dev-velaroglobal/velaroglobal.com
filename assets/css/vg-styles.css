@@ -1,0 +1,398 @@
+/**
+ * vg-styles.css
+ * Velaro Global — Custom Section Styles
+ *
+ * Scope: All VG-authored components added to the site:
+ *   - Design tokens (CSS custom properties)
+ *   - Applications section & app cards
+ *   - Screenshot gallery
+ *   - Modal overlay system (Privacy Policy / Terms)
+ *   - Policy links bar
+ *   - Utility classes
+ *
+ * Convention: All selectors are prefixed with `.vg-` or `#vg-`
+ * to avoid collision with the base GoDaddy stylesheet.
+ */
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   DESIGN TOKENS
+   Single source of truth for brand colours, spacing, and typography.
+───────────────────────────────────────────────────────────────────────────── */
+:root {
+  --vg-brown:       #b08070;
+  --vg-brown-light: #e8ddd8;
+  --vg-dark:        #161616;
+  --vg-grey:        #666;
+  --vg-bg:          #fefefe;
+  --vg-section-alt: #f9f6f4;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   APPLICATIONS SECTION
+───────────────────────────────────────────────────────────────────────────── */
+#vg-apps {
+  font-family: 'Karla', sans-serif;
+  padding: 80px 40px;
+  background: var(--vg-section-alt);
+  text-align: center;
+}
+
+.vg-section-label {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--vg-brown);
+  margin-bottom: 12px;
+}
+
+.vg-section-title {
+  font-family: 'Old Standard TT', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  color: var(--vg-dark);
+  margin: 0 0 16px;
+  font-weight: 400;
+}
+
+.vg-section-subtitle {
+  font-size: 16px;
+  color: var(--vg-grey);
+  max-width: 560px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   APP CARD
+───────────────────────────────────────────────────────────────────────────── */
+.vg-app-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(176, 128, 112, 0.10);
+  max-width: 900px;
+  margin: 0 auto 48px;
+  overflow: hidden;
+  text-align: left;
+}
+
+/* Card header */
+.vg-app-card-header {
+  background: linear-gradient(135deg, var(--vg-brown) 0%, #c8a090 100%);
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.vg-app-card-header h3 {
+  color: #fff;
+  font-family: 'Old Standard TT', serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.vg-app-card-header .app-tag {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* App icon badge */
+.app-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.20);
+}
+
+.app-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card body */
+.vg-app-card-body {
+  padding: 36px;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SCREENSHOT GALLERY
+───────────────────────────────────────────────────────────────────────────── */
+.vg-screenshots-label,
+.vg-app-desc-label,
+.vg-playstore-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--vg-brown);
+  margin-bottom: 14px;
+}
+
+.vg-screenshots {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.vg-screenshot-slot {
+  flex: 0 0 140px;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  background: var(--vg-brown-light);
+}
+
+.vg-screenshot-slot:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.vg-screenshot-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-radius: 12px;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   APP DESCRIPTION
+───────────────────────────────────────────────────────────────────────────── */
+.vg-app-desc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #444;
+  margin-bottom: 32px;
+  max-width: 680px;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   PLAY STORE BUTTON
+───────────────────────────────────────────────────────────────────────────── */
+.vg-playstore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--vg-dark);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.vg-playstore-btn:hover {
+  background: var(--vg-brown);
+  transform: translateY(-1px);
+}
+
+.vg-playstore-btn .ps-text small {
+  display: block;
+  font-size: 10px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.vg-playstore-btn .ps-text strong {
+  font-size: 15px;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   MODAL OVERLAY SYSTEM
+   Supports any number of modals — just add .vg-modal-overlay to the wrapper.
+───────────────────────────────────────────────────────────────────────────── */
+.vg-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(22, 22, 22, 0.6);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(3px);
+}
+
+.vg-modal-overlay.open {
+  display: flex;
+}
+
+.vg-modal {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 760px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+  animation: vg-modal-enter 0.25s ease;
+}
+
+@keyframes vg-modal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Modal header */
+.vg-modal-header {
+  padding: 28px 36px 20px;
+  border-bottom: 1px solid #f0ebe8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+}
+
+.vg-modal-header h2 {
+  font-family: 'Old Standard TT', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--vg-dark);
+  margin: 0;
+}
+
+.vg-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--vg-grey);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.vg-modal-close:hover {
+  background: var(--vg-brown-light);
+}
+
+/* Modal body */
+.vg-modal-body {
+  padding: 32px 36px 40px;
+  font-family: 'Karla', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.vg-modal-body h3 {
+  font-family: 'Old Standard TT', serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--vg-dark);
+  margin: 28px 0 8px;
+  border-left: 3px solid var(--vg-brown);
+  padding-left: 12px;
+}
+
+.vg-modal-body p {
+  margin: 0 0 14px;
+}
+
+.vg-modal-updated {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--vg-brown);
+  margin-bottom: 24px;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   POLICY LINKS BAR
+───────────────────────────────────────────────────────────────────────────── */
+.vg-policy-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 16px 20px 8px;
+  background: #f9f6f4;
+  font-family: 'Karla', sans-serif;
+  font-size: 13px;
+}
+
+.vg-policy-links a {
+  color: var(--vg-brown);
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.vg-policy-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   UTILITY CLASSES
+───────────────────────────────────────────────────────────────────────────── */
+
+/* Replaces all inline style="color:#b08070;" attributes in modal body links */
+.vg-link {
+  color: var(--vg-brown);
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE OVERRIDES
+───────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  #vg-apps {
+    padding: 60px 20px;
+  }
+
+  .vg-app-card-body {
+    padding: 24px 20px;
+  }
+
+  .vg-modal-header,
+  .vg-modal-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .vg-screenshot-slot {
+    flex: 0 0 120px;
+    height: 213px;
+  }
+}
