@@ -395,10 +395,16 @@ if ('serviceWorker' in navigator) {
   }
   .vg-app-card-header .app-badge {
     width: 56px; height: 56px;
-    background: rgba(255,255,255,0.25);
     border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 26px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.20);
+  }
+  .vg-app-card-header .app-badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   .vg-app-card-header h3 {
     color: #fff;
@@ -439,23 +445,25 @@ if ('serviceWorker' in navigator) {
   .vg-screenshot-slot {
     flex: 0 0 140px;
     height: 250px;
-    background: var(--vg-brown-light);
     border-radius: 12px;
-    border: 2px dashed var(--vg-brown);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--vg-brown);
-    font-size: 13px;
-    font-family: 'Karla', sans-serif;
-    gap: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
-    transition: background 0.2s;
+    background: var(--vg-brown-light);
   }
-  .vg-screenshot-slot:hover { background: #dfd0c8; }
-  .vg-screenshot-slot svg { opacity: 0.6; }
-  .vg-screenshot-slot span { opacity: 0.8; font-size: 11px; text-align:center; }
+  .vg-screenshot-slot:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  }
+  .vg-screenshot-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    border-radius: 12px;
+  }
 
   /* Description */
   .vg-app-desc-label {
@@ -600,7 +608,7 @@ if ('serviceWorker' in navigator) {
     #vg-apps { padding: 60px 20px; }
     .vg-app-card-body { padding: 24px 20px; }
     .vg-modal-header, .vg-modal-body { padding-left: 20px; padding-right: 20px; }
-    .vg-screenshot-slot { flex: 0 0 120px; height: 210px; }
+    .vg-screenshot-slot { flex: 0 0 120px; height: 213px; }
   }
 </style>
 </head>
@@ -614,7 +622,9 @@ if ('serviceWorker' in navigator) {
   <!-- ── App Card: app-one ───────────────────────────────────────── -->
   <article class="vg-app-card" id="app-one">
     <div class="vg-app-card-header">
-      <div class="app-badge">🎮</div>
+      <div class="app-badge">
+        <img src="app_info/icon/app_icon.png" alt="VG GameBooster app icon">
+      </div>
       <h3>VG GameBooster</h3>
       <span class="app-tag">Available Now</span>
     </div>
@@ -624,32 +634,16 @@ if ('serviceWorker' in navigator) {
       <p class="vg-screenshots-label">Screenshots</p>
       <div class="vg-screenshots">
         <div class="vg-screenshot-slot">
-          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 20.25h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12.75a1.5 1.5 0 001.5 1.5z"/>
-          </svg>
-          <span>Screenshot 1</span>
+          <img src="app_info/screenshots/screenshot_1.png" alt="VG GameBooster screenshot 1 — Device Performance overview">
         </div>
         <div class="vg-screenshot-slot">
-          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 20.25h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12.75a1.5 1.5 0 001.5 1.5z"/>
-          </svg>
-          <span>Screenshot 2</span>
+          <img src="app_info/screenshots/screenshot_2.png" alt="VG GameBooster screenshot 2 — Quick Actions and Installed Games">
         </div>
         <div class="vg-screenshot-slot">
-          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 20.25h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12.75a1.5 1.5 0 001.5 1.5z"/>
-          </svg>
-          <span>Screenshot 3</span>
+          <img src="app_info/screenshots/screenshot_3.png" alt="VG GameBooster screenshot 3 — Installed Games list with Game Mode">
         </div>
         <div class="vg-screenshot-slot">
-          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 20.25h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12.75a1.5 1.5 0 001.5 1.5z"/>
-          </svg>
-          <span>Screenshot 4</span>
+          <img src="app_info/screenshots/screenshot_4.png" alt="VG GameBooster screenshot 4 — Settings panel">
         </div>
       </div>
 
