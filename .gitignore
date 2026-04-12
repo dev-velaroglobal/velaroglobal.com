@@ -1,1 +1,4 @@
-./idea
+.idea/
+*.iml
+build/
+local.properties
