@@ -364,6 +364,25 @@
 
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   GODADDY OVERRIDES
+   Neutralise GoDaddy-injected dark backgrounds and unwanted sections.
+───────────────────────────────────────────────────────────────────────────── */
+
+/* The GoDaddy footer widget uses c1-7q for a dark (rgb 22 22 22) background.
+   Override it to match the site's light theme. */
+.widget-footer .c1-7q,
+.widget-footer section.c1-7q {
+  background-color: var(--vg-section-alt) !important;
+  color: var(--vg-dark) !important;
+}
+
+/* Restore the separator and text colours inside the now-light footer */
+.widget-footer hr {
+  border-color: var(--vg-brown-light) !important;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
    UTILITY CLASSES
 ───────────────────────────────────────────────────────────────────────────── */
 
