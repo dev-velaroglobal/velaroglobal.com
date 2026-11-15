@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HabitStack — build habits that stick, one stack at a time</title>
+<meta name="description" content="HabitStack is an Android habit tracker built on habit stacking: chain small habits into routines, get reminders, keep streaks and track your progress." />
+<link rel="icon" type="image/png" href="/habitstack/favicon.png" />
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f3faf5;
+    --fg: #14251a;
+    --muted: #4d5f53;
+    --accent: #15803d;
+    --card: #ffffff;
+    --border: #d7e9dc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1712;
+      --fg: #e9f3ec;
+      --muted: #a9bdb0;
+      --accent: #4ade80;
+      --card: #16211a;
+      --border: #24362a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 20px 40px;
+  }
+  header { text-align: center; margin-bottom: 40px; }
+  header img {
+    width: 96px;
+    height: 96px;
+    display: block;
+    border-radius: 22%;
+    margin: 0 auto 20px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  p.tagline {
+    color: var(--muted);
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 520px;
+  }
+  p.status {
+    display: inline-block;
+    margin: 20px 0 0;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  h2 {
+    font-size: 20px;
+    margin: 40px 0 16px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 560px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 22px;
+  }
+  .card h3 { margin: 0 0 6px; font-size: 16px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .prose { color: var(--muted); font-size: 16px; }
+  .prose p { margin: 0 0 12px; }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  a:hover { text-decoration: underline; }
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--muted);
+    text-align: center;
+  }
+  footer nav a { margin: 0 10px; }
+  footer p { margin: 12px 0 0; }
+</style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="/habitstack/logo.png" width="96" height="96" alt="HabitStack logo" />
+      <h1>HabitStack</h1>
+      <p class="tagline">Build habits that stick, one stack at a time. HabitStack is a habit
+        tracker for Android built on habit stacking: chain small habits into routines you
+        actually keep.</p>
+      <p class="status">Coming soon to Google Play</p>
+    </header>
+
+    <h2>What HabitStack does</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Habit stacks</h3>
+        <p>Group habits into a routine, such as a morning stack, and tick them off in order.
+          Start from a template or build your own.</p>
+      </div>
+      <div class="card">
+        <h3>Reminders</h3>
+        <p>Choose the days and time for each stack. Gentle nudges and quiet hours keep
+          reminders helpful, not noisy.</p>
+      </div>
+      <div class="card">
+        <h3>Streaks &amp; progress</h3>
+        <p>See today's progress, your streaks and a calendar heatmap of every day you showed
+          up.</p>
+      </div>
+      <div class="card">
+        <h3>Accountability partner</h3>
+        <p>With Pro, invite one partner to stay accountable together. Only your first name and
+          when you linked are shared, never your habits.</p>
+      </div>
+    </div>
+
+    <h2>Your data</h2>
+    <div class="prose">
+      <p>HabitStack works fully without an account, and your habits stay on your phone. Signing
+        in with Google is optional: it backs up and syncs your habits across your devices and
+        lets you link a partner. HabitStack asks Google only for your name, email address and
+        profile photo, and uses them only to run your account.</p>
+      <p>Read the <a href="/habitstack/privacy/">privacy policy</a> for what we collect and why, or see
+        <a href="/habitstack/delete-account/">how to delete your account</a> and its data.</p>
+    </div>
+
+    <footer>
+      <nav>
+        <a href="/">Velaro Global</a>
+        <a href="/habitstack/privacy/">Privacy policy</a>
+        <a href="/habitstack/terms/">Terms</a>
+        <a href="/habitstack/delete-account/">Delete account</a>
+        <a href="mailto:velaroglobal@gmail.com">Contact</a>
+      </nav>
+      <p>&copy; 2026 Velaro Global · velaroglobal@gmail.com</p>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Page not found &middot; Velaro Global</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #faf7f2;
+    --fg: #1c1b1a;
+    --muted: #5f5a52;
+    --accent: #c4621f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17140f;
+      --fg: #f3eee6;
+      --muted: #c9c0b2;
+      --accent: #f0924a;
+    }
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  main { text-align: center; max-width: 420px; }
+  h1 { font-size: 48px; margin: 0; }
+  p { color: var(--muted); font-size: 16px; }
+  a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <main>
+    <h1>404</h1>
+    <p>That page doesn't exist.</p>
+    <a href="/">Back to Velaro Global</a>
+  </main>
+</body>
+</html>
