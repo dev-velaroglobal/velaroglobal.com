@@ -26,8 +26,8 @@ any host without rewrite rules.
 - The site uses HabitStack's dark colour scheme (from `habitstack/ui/.../theme/Color.kt` and
   `design/brand/` in `dev-velaroglobal/indie-apps`): `#0D1B0F` background, `#16291B` cards,
   `#4ADE80` accent, with Plus Jakarta Sans from Google Fonts.
-- The Velaro Global logo is the original `favicon-512x512.png` (serif "VG" in a ring), shown as
-  is with the "Velaro Global" wordmark next to it. Never edit or recolour the logo file.
+- The Velaro Global logo is the original `assets/img/vg-logo.png` (the "VG / Velaro Global" ring
+  logo from the old site header), shown as is. Never edit, recolour or redraw the logo file.
 - Every page shares the same header and footer. When you add or rename a page, update the header
   nav and the footer columns on every page.
 

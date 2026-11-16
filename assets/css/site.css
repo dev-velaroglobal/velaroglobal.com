@@ -70,10 +70,10 @@ p { margin: 0 0 14px; }
 .site-header .wrap { display: flex; align-items: center; gap: 16px; min-height: 66px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 800; font-size: 19px; letter-spacing: -0.02em; white-space: nowrap; }
 .brand:hover { text-decoration: none; }
-.brand .vg-mark { width: 40px; height: 40px; flex: none; }
+.brand .vg-mark { width: 48px; height: 48px; flex: none; }
 .brand .wordmark { font-family: var(--serif); font-weight: 700; font-size: 22px; letter-spacing: 0; }
 
-/* The Velaro Global logo is the original file (favicon-512x512.png), shown as is. */
+/* The Velaro Global logo is the original file (assets/img/vg-logo.png), shown as is. */
 .vg-mark { display: inline-block; }
 .site-nav { margin-left: auto; display: flex; gap: 4px 22px; flex-wrap: wrap; justify-content: flex-end; }
 .site-nav a { color: var(--muted); font-weight: 500; font-size: 15px; }
@@ -101,7 +101,7 @@ section.alt { background: rgba(10, 22, 12, 0.6); border-top: 1px solid var(--bor
 
 /* ── Hero ─────────────────────────────────────────────────────────────── */
 .hero { padding: 96px 0 80px; text-align: center; }
-.hero .vg-mark { display: block; width: 96px; height: 96px; margin: 0 auto 30px; }
+.hero .vg-mark { display: block; width: 180px; height: 180px; margin: 0 auto 30px; }
 .hero h1 { font-size: clamp(40px, 7.4vw, 76px); margin-bottom: 20px; }
 .hero .lede { font-size: clamp(18px, 2.4vw, 21px); color: var(--muted); max-width: 640px; margin: 0 auto 34px; }
 .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
