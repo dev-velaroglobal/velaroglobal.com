@@ -5,151 +5,202 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Velaro Global — apps built for people, powered by purpose</title>
 <meta name="description" content="Velaro Global makes thoughtfully designed Android apps: HabitStack, a habit tracker built on habit stacking, and VG GameBooster." />
+<meta name="theme-color" content="#0d1b0f" />
 <link rel="canonical" href="https://velaroglobal.com/" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <meta property="og:site_name" content="Velaro Global" />
-<meta property="og:title" content="Velaro Global" />
-<meta property="og:description" content="Thoughtfully designed apps that make everyday life a little better." />
 <meta property="og:type" content="website" />
+<meta property="og:title" content="Velaro Global — apps built for people, powered by purpose" />
+<meta property="og:description" content="Velaro Global makes thoughtfully designed Android apps: HabitStack, a habit tracker built on habit stacking, and VG GameBooster." />
 <meta property="og:url" content="https://velaroglobal.com/" />
 <meta property="og:image" content="https://velaroglobal.com/favicon-512x512.png" />
-<style>
-  :root {
-    color-scheme: light dark;
-    --bg: #f7f7f5;
-    --fg: #17191c;
-    --muted: #5a6068;
-    --accent: #1f5fbf;
-    --card: #ffffff;
-    --border: #e1e3e6;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #111316;
-      --fg: #eceef1;
-      --muted: #a4abb4;
-      --accent: #7fb0ff;
-      --card: #1a1d21;
-      --border: #2b3036;
-    }
-  }
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.55;
-  }
-  main { max-width: 760px; margin: 0 auto; padding: 56px 20px 40px; }
-  header { text-align: center; margin-bottom: 40px; }
-  h1 { font-size: 34px; margin: 0 0 8px; letter-spacing: -0.01em; }
-  .tagline { color: var(--muted); font-size: 18px; margin: 0 auto; max-width: 520px; }
-  h2 { font-size: 20px; margin: 40px 0 16px; }
-  .app {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 22px;
-    margin-bottom: 16px;
-  }
-  .app > div { min-width: 0; flex: 1; }
-  .app img.icon { width: 72px; height: 72px; border-radius: 22%; flex: none; }
-  .app h3 { margin: 0 0 4px; font-size: 18px; }
-  .app p { margin: 0 0 10px; color: var(--muted); font-size: 15px; }
-  .badge {
-    display: inline-block;
-    font-size: 12px;
-    padding: 2px 10px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    color: var(--muted);
-    margin-left: 6px;
-    vertical-align: 2px;
-    font-weight: 400;
-  }
-  .links a { margin-right: 14px; font-size: 14px; display: inline-block; }
-  .shots { display: flex; gap: 10px; overflow-x: auto; margin: 12px 0; padding-bottom: 4px; }
-  .shots img { height: 220px; border-radius: 12px; border: 1px solid var(--border); }
-  a { color: var(--accent); text-decoration: none; font-weight: 600; }
-  a:hover { text-decoration: underline; }
-  .prose { color: var(--muted); }
-  footer {
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-    font-size: 14px;
-    color: var(--muted);
-    text-align: center;
-  }
-  footer p { margin: 8px 0 0; }
-  @media (max-width: 520px) {
-    .app { flex-direction: column; align-items: stretch; }
-    .app > div { width: 100%; }
-    .shots img { height: 180px; }
-  }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+<link rel="stylesheet" href="/assets/css/site.css" />
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Velaro Global</h1>
-      <p class="tagline">Built for people, powered by purpose. We make thoughtfully designed
-        Android apps that make everyday life a little better.</p>
-    </header>
-
-    <h2>Our apps</h2>
-
-    <section class="app" id="habitstack">
-      <img class="icon" src="/habitstack/logo.png" width="72" height="72" alt="HabitStack icon" />
-      <div>
-        <h3>HabitStack <span class="badge">Coming soon</span></h3>
-        <p>A habit tracker built on habit stacking: chain small habits into routines, get
-          gentle reminders, keep streaks and see your progress. Works fully offline, with
-          optional Google sign-in for sync and an accountability partner.</p>
-        <div class="links">
-          <a href="/habitstack/">About HabitStack</a>
-          <a href="/habitstack/privacy/">Privacy</a>
-          <a href="/habitstack/terms/">Terms</a>
-          <a href="/habitstack/delete-account/">Delete account</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Velaro Global home"><img class="vg-mark" src="/favicon.svg" width="64" height="64" alt="" />Velaro Global</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/#apps" aria-current="page">Apps</a>
+        <a href="/habitstack/">HabitStack</a>
+        <a href="/gamebooster/">GameBooster</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <img class="vg-mark" src="/favicon.svg" width="64" height="64" alt="" />
+        <span class="eyebrow">Velaro Global · Android apps</span>
+        <h1>Built for people,<br /><span class="grad">powered by purpose.</span></h1>
+        <p class="lede">We make small, focused Android apps that help with everyday life: building
+          habits that stick and getting the most out of your phone. No clutter, no selling your
+          data.</p>
+        <div class="actions">
+          <a class="btn" href="#apps">See our apps</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
         </div>
       </div>
     </section>
 
-    <section class="app" id="gamebooster">
-      <img class="icon" src="/app_info/icon/app_icon.png" width="72" height="72" alt="VG GameBooster icon" />
-      <div>
-        <h3>VG GameBooster <span class="badge">Available now</span></h3>
-        <p>Supercharge your Android gaming: monitor CPU, RAM and battery in real time, close
-          background processes, and switch on Game Mode and Turbo Mode, all in one clean app.</p>
-        <div class="shots">
-          <img src="/app_info/screenshots/screenshot_1.png" alt="VG GameBooster screenshot 1" loading="lazy" />
-          <img src="/app_info/screenshots/screenshot_2.png" alt="VG GameBooster screenshot 2" loading="lazy" />
-          <img src="/app_info/screenshots/screenshot_3.png" alt="VG GameBooster screenshot 3" loading="lazy" />
-          <img src="/app_info/screenshots/screenshot_4.png" alt="VG GameBooster screenshot 4" loading="lazy" />
+    <section id="apps" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Our apps</span>
+          <h2>Thoughtfully designed, built to be used every day.</h2>
+          <p>Each app does one job well, works offline wherever it can, and is honest about what it
+            collects.</p>
         </div>
-        <div class="links">
-          <a href="https://play.google.com/store/apps/details?id=com.velaroglobal.gamebooster">Get it on Google Play</a>
-          <a href="/privacy-policy.html">Privacy</a>
-          <a href="/terms.html">Terms</a>
+
+        <article class="app-card habitstack">
+          <div>
+            <div class="app-head">
+              <img src="/habitstack/logo.png" width="68" height="68" alt="HabitStack icon" />
+              <div>
+                <h3>HabitStack <span class="pill">Coming soon</span></h3>
+                <p class="tag">Habit tracker · Android</p>
+              </div>
+            </div>
+            <p>Build habits that stick, one stack at a time. Chain small habits into routines,
+              get gentle reminders, keep your streaks and see your progress at a glance.</p>
+            <ul class="points">
+              <li>Habit stacks with ready-made templates</li>
+              <li>Smart reminders with quiet hours</li>
+              <li>Streaks, a 90-day calendar and insights</li>
+              <li>Optional sync and an accountability partner</li>
+            </ul>
+            <div class="actions" style="justify-content:flex-start">
+              <a class="btn" href="/habitstack/">Explore HabitStack</a>
+            </div>
+            <div class="links">
+              <a href="/habitstack/privacy/">Privacy policy</a>
+              <a href="/habitstack/terms/">Terms of use</a>
+              <a href="/habitstack/delete-account/">Delete account</a>
+            </div>
+          </div>
+          <div class="app-shots">
+            <div class="phone"><img src="/habitstack/screenshots/today-dark.webp" width="540" height="960" loading="lazy" alt="HabitStack Today screen" /></div>
+            <div class="phone"><img src="/habitstack/screenshots/progress-dark.webp" width="540" height="960" loading="lazy" alt="HabitStack Progress screen" /></div>
+          </div>
+        </article>
+
+        <article class="app-card gamebooster">
+          <div>
+            <div class="app-head">
+              <img src="/gamebooster/icon.png" width="68" height="68" alt="VG GameBooster icon" />
+              <div>
+                <h3>VG GameBooster <span class="pill live">Available now</span></h3>
+                <p class="tag">Performance · Android</p>
+              </div>
+            </div>
+            <p>Supercharge your Android gaming. Watch CPU, RAM and battery in real time, free up
+              memory, and launch your games with Game Mode and Turbo Mode.</p>
+            <ul class="points">
+              <li>Live device performance and specs</li>
+              <li>One-tap optimise, clear memory and kill processes</li>
+              <li>Per-game Game Mode and Turbo Mode</li>
+            </ul>
+            <div class="actions" style="justify-content:flex-start">
+              <a class="btn rocket" href="https://play.google.com/store/apps/details?id=com.velaroglobal.gamebooster">Get it on Google Play</a>
+              <a class="btn ghost" href="/gamebooster/">Learn more</a>
+            </div>
+            <div class="links">
+              <a href="/privacy-policy.html">Privacy policy</a>
+              <a href="/terms.html">Terms &amp; conditions</a>
+            </div>
+          </div>
+          <div class="app-shots">
+            <div class="phone"><img src="/gamebooster/screenshots/1.webp" width="540" height="960" loading="lazy" alt="VG GameBooster home screen" /></div>
+            <div class="phone"><img src="/gamebooster/screenshots/3.webp" width="540" height="960" loading="lazy" alt="VG GameBooster installed games screen" /></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">About</span>
+          <h2>A small studio with a simple idea.</h2>
+          <p>Velaro Global is an independent studio making Android apps that earn a place on your
+            home screen. We'd rather build fewer things, and build them properly.</p>
+        </div>
+        <div class="grid three values">
+          <div class="card">
+            <h3>Respect your data</h3>
+            <p>We collect only what an app needs to work, explain it in plain language, and never
+              sell your personal data.</p>
+          </div>
+          <div class="card">
+            <h3>Simple by design</h3>
+            <p>Clear screens, sensible defaults and no dark patterns. Every feature has to justify
+              the space it takes.</p>
+          </div>
+          <div class="card">
+            <h3>Built to last</h3>
+            <p>Offline-first where it can be, light and dark themes, and regular updates based on
+              what people actually use.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <h2>Contact</h2>
-    <p class="prose">Questions, feedback or a data request? Email
-      <a href="mailto:velaroglobal@gmail.com">velaroglobal@gmail.com</a> and we'll get back to
-      you.</p>
-
-    <footer>
-      <p>&copy; 2026 Velaro Global</p>
-    </footer>
+    <section id="contact" class="alt contact">
+      <div class="wrap narrow">
+        <span class="eyebrow">Contact</span>
+        <h2 style="font-size:clamp(30px,4.4vw,44px);margin-bottom:12px">Questions, feedback or a data request?</h2>
+        <p style="color:var(--muted)">Send us an email and we'll get back to you.</p>
+        <a class="mail" href="mailto:velaroglobal@gmail.com">velaroglobal@gmail.com</a>
+      </div>
+    </section>
   </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div class="about">
+          <a class="brand" href="/"><img class="vg-mark" src="/favicon.svg" width="64" height="64" alt="" />Velaro Global</a>
+          <p>Built for people, powered by purpose. Small, focused Android apps that respect your
+            time and your data.</p>
+        </div>
+        <div>
+          <h4>HabitStack</h4>
+          <ul>
+            <li><a href="/habitstack/">Overview</a></li>
+            <li><a href="/habitstack/privacy/">Privacy policy</a></li>
+            <li><a href="/habitstack/terms/">Terms of use</a></li>
+            <li><a href="/habitstack/delete-account/">Delete account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>GameBooster</h4>
+          <ul>
+            <li><a href="/gamebooster/">Overview</a></li>
+            <li><a href="/privacy-policy.html">Privacy policy</a></li>
+            <li><a href="/terms.html">Terms &amp; conditions</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.velaroglobal.gamebooster">Google Play</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="/#apps">Apps</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="mailto:velaroglobal@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal-line">
+        <span>&copy; 2026 Velaro Global. All rights reserved.</span>
+        <a href="mailto:velaroglobal@gmail.com">velaroglobal@gmail.com</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
