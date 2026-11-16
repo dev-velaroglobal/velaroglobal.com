@@ -26,8 +26,9 @@ any host without rewrite rules.
 - The site uses HabitStack's dark colour scheme (from `habitstack/ui/.../theme/Color.kt` and
   `design/brand/` in `dev-velaroglobal/indie-apps`): `#0D1B0F` background, `#16291B` cards,
   `#4ADE80` accent, with Plus Jakarta Sans from Google Fonts.
-- `favicon.svg` is the Velaro Global mark (green "VG" on the dark HabitStack tile); the PNG
-  favicons and `apple-touch-icon.png` are rendered from it.
+- `vg-logo.png` is the original Velaro Global monogram (serif "VG" in a ring), recoloured to the
+  HabitStack green with a transparent background. The favicons and `apple-touch-icon.png` put the
+  same mark on the dark HabitStack tile.
 - Every page shares the same header and footer. When you add or rename a page, update the header
   nav and the footer columns on every page.
 
