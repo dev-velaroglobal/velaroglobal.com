@@ -126,6 +126,8 @@ section.alt { background: rgba(10, 22, 12, 0.6); border-top: 1px solid var(--bor
   vertical-align: middle; white-space: nowrap;
 }
 .pill.live { background: rgba(255, 138, 120, 0.12); color: var(--rocket); border-color: rgba(255, 138, 120, 0.3); }
+.pill.off { background: rgba(167, 196, 178, 0.10); color: var(--muted); border-color: rgba(167, 196, 178, 0.28); }
+.note { color: var(--muted); font-size: 15px; font-style: italic; }
 
 /* ── Product hero (app pages) ─────────────────────────────────────────── */
 .product-hero { padding: 80px 0 64px; }
