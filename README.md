@@ -13,8 +13,8 @@ the repo root as is.
 | `/habitstack/privacy/` | HabitStack privacy policy |
 | `/habitstack/terms/` | HabitStack terms of use |
 | `/habitstack/delete-account/` | HabitStack account deletion (linked from Play Console) |
-| `/gamebooster/` | VG GameBooster overview |
-| `/privacy-policy.html`, `/terms.html` | VG GameBooster legal pages. Keep these URLs, the Play listing links to them. |
+| `/gamebooster/` | VG GameBooster overview (discontinued, no longer on Google Play) |
+| `/privacy-policy.html`, `/terms.html` | VG GameBooster legal pages. Keep these URLs for anyone who still has the app installed. |
 | `/404.html`, `/robots.txt`, `/sitemap.xml` | Housekeeping |
 
 Each page lives at `<app>/<page>/index.html`, so clean URLs such as `/habitstack/privacy/` work on
@@ -36,7 +36,9 @@ any host without rewrite rules.
 - `habitstack/screenshots/*-{light,dark}.webp` come from the app's Roborazzi golden images in
   `indie-apps` (each module's `src/test/snapshots/`), cropped to 9:16 and resized to 540×960.
   The site uses the dark ones; the light ones are kept for a future light theme.
-- `gamebooster/screenshots/*.webp` are device screenshots, cropped and resized the same way.
+- `gamebooster/screenshots/*.webp` are device screenshots, cropped and resized the same way. In
+  `2.webp` and `3.webp` the example games below Call of Duty were swapped for BGMI, Genshin Impact
+  and Clash of Clans, using their names, package ids and icons from Google Play.
 - Keep every image small (WebP, 540 px wide).
 
 ## Adding an app
