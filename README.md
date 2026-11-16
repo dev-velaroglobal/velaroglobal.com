@@ -36,7 +36,9 @@ any host without rewrite rules.
 - `habitstack/screenshots/*-{light,dark}.webp` come from the app's Roborazzi golden images in
   `indie-apps` (each module's `src/test/snapshots/`), cropped to 9:16 and resized to 540×960.
   The site uses the dark ones; the light ones are kept for a future light theme.
-- `gamebooster/screenshots/*.webp` are device screenshots, cropped and resized the same way.
+- `gamebooster/screenshots/*.webp` are device screenshots, cropped and resized the same way. In
+  `2.webp` and `3.webp` the example games below Call of Duty were swapped for BGMI, Genshin Impact
+  and Clash of Clans, using their names, package ids and icons from Google Play.
 - Keep every image small (WebP, 540 px wide).
 
 ## Adding an app
