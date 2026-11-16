@@ -8,7 +8,7 @@ the repo root as is.
 
 | Path | Page |
 |---|---|
-| `/` (`index.html`) | Studio home: hero, app portfolio, about, contact |
+| `/` (`index.html`) | Studio home: hero, the apps, contact |
 | `/habitstack/` | HabitStack overview: screenshots, features, Free vs Pro, your data. The page Google's OAuth brand verification checks. |
 | `/habitstack/privacy/` | HabitStack privacy policy |
 | `/habitstack/terms/` | HabitStack terms of use |
@@ -26,9 +26,8 @@ any host without rewrite rules.
 - The site uses HabitStack's dark colour scheme (from `habitstack/ui/.../theme/Color.kt` and
   `design/brand/` in `dev-velaroglobal/indie-apps`): `#0D1B0F` background, `#16291B` cards,
   `#4ADE80` accent, with Plus Jakarta Sans from Google Fonts.
-- The Velaro Global logo is the original `favicon-512x512.png` (serif "VG" in a ring), never
-  edited. Pages show it with the "Velaro Global" wordmark and tint it green with a CSS colour
-  overlay (`.vg-mark` in `site.css`); the favicons themselves keep the original colours.
+- The Velaro Global logo is the original `favicon-512x512.png` (serif "VG" in a ring), shown as
+  is with the "Velaro Global" wordmark next to it. Never edit or recolour the logo file.
 - Every page shares the same header and footer. When you add or rename a page, update the header
   nav and the footer columns on every page.
 
@@ -46,7 +45,7 @@ any host without rewrite rules.
    app has accounts, `<app>/delete-account/index.html`. Copying the `habitstack/` folder is the
    quickest start.
 2. Add an `app-card` for it to the root `index.html`.
-3. Add it to the header nav and footer on every page.
+3. Add it to the header nav and a footer column on every page.
 4. Add its URLs to `sitemap.xml`.
 
 ## Keeping legal text in sync
