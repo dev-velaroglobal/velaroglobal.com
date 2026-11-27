@@ -15,7 +15,7 @@ the repo root as is.
 | `/habitstack/delete-account/` | HabitStack account deletion (linked from Play Console) |
 | `/gamebooster/` | VG GameBooster overview (discontinued, no longer on Google Play) |
 | `/privacy-policy.html`, `/terms.html` | VG GameBooster legal pages. Keep these URLs for anyone who still has the app installed. |
-| `/404.html`, `/robots.txt`, `/sitemap.xml` | Housekeeping |
+| `/404.html`, `/robots.txt`, `/sitemap.xml` | Housekeeping. `404.html` is `noindex` with no canonical, so Google never indexes it as a page. |
 
 Each page lives at `<app>/<page>/index.html`, so clean URLs such as `/habitstack/privacy/` work on
 any host without rewrite rules.
@@ -48,7 +48,8 @@ any host without rewrite rules.
    quickest start.
 2. Add an `app-card` for it to the root `index.html`.
 3. Add it to the header nav and a footer column on every page.
-4. Add its URLs to `sitemap.xml`.
+4. Add its URLs to `sitemap.xml`, each with a `<lastmod>` date. Bump a page's `<lastmod>` whenever
+   its content changes, so Google recrawls it.
 
 ## Keeping legal text in sync
 

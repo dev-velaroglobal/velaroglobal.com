@@ -9,3 +9,7 @@ local.properties
 ._*
 .Spotlight-V100
 .Trashes
+
+# Full-page captures from screenshot checks; never publish them
+/_*-1280.png
+/_*-390.png
